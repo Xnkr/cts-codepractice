@@ -1,0 +1,57 @@
+Remove adjacent duplicate characters
+Given a string, write a program to recursively remove adjacent duplicate characters from string. The output string should not have any adjacent duplicates. See following examples.
+
+Input:  azxxzy
+Output: ay
+[Hint: First "azxxzy" is reduced to "azzy". The string "azzy" contains duplicates, so it is further reduced to "ay"].
+
+Input: caaabbbaacdddd
+Output: -1
+
+Input: acaaabbbacdddd
+Output: acac
+
+Input Format
+Input contains a single string . See the sample input section for details.
+
+Business Rules
+       Input string should not contain any special characters or whitespace. Display "Invalid Input" to the screen if voilates any of these constraints.
+       If the output string doesn't contain any character after removing the adjacent duplicate characters from the string, then it should print -1.
+          Maximum length of the string should be 50. Else display "Size of the string is too large".
+
+Output Format
+Print the ouput string after  removing the adjacent duplicate characters from the input string.
+
+Sample Input 1:
+caaabbbaacdddd
+Sample Output 1
+acac
+
+Sample Input 2:
+caaabbbaacdddd
+Sample Output 2:
+-1
+
+Sample Input 3:
+abcd@
+Sample Output 3:
+Invalid Input
+
+Sample Input 4:
+youaregivenastringswriteaprogramtofindthelengthofthestring
+Sample Output 4:
+Size of the string is too large
+
+
+
+
+Note :
+Function specification is the following for C#,Java and C++.
+Name:- RemoveDuplicateChars
+Return Type:- string
+Parameter(s):- string input1
+
+Function specification for C is the following.
+Name:-removeDuplicateChars
+Return Type:-char*
+Parameter(s):-char *input1

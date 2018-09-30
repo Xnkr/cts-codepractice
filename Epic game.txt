@@ -1,0 +1,29 @@
+Epic Game
+Simon and Antisimon play a game. Initially each player receives one fixed positive integer that doesn't change throughout the game. Simon receives number a and Antisimon receives number b. They also have a heap of n stones. The players take turns to make a move and Simon starts. During a move a player should take from the heap the number of stones equal to the greatest common divisor of the fixed number he has received and the number of stones left in the heap. A player loses when he cannot take the required number of stones (i. e. the heap has strictly less stones left than one needs to take).
+
+Write a program to determine by the given a, b and n who wins the game.
+
+Input and Output Format:
+The input consists of three integers. (1 = a, b, n = 100)
+The first input contains an integer a, which corresponds to the fixed numbers Simon.
+The first input contains an integer b, which corresponds to the fixed numbers Antisimon.
+The third input contains an integer n, which corresponds to the initial number of stones in the pile.
+
+The output displays ---- If Simon wins, print "" (without the quotes), otherwise print "1" (without the quotes).
+
+Sample Input 1:
+3
+5
+9
+Sample Output 1:
+0
+
+
+Sample Input 2:
+1
+1
+100
+Sample Output 2:
+1
+
+ 

@@ -1,0 +1,36 @@
+Erlin and Substrings
+ 
+     
+
+Erlin is of French origin residing at Alberta and is so eager to learn English. She joined a famous English Teaching Academy in the City and got trained with both written and spoken English.
+ 
+
+
+There are regular assessments conducted in the due course of the training. Erlin appeared for one such test in which she had a question to find the number of distinct substrings of the given string.
+
+
+For example, given a string “pqpqp”, the distinct substrings are
+length 1: p, q
+length 2: pq, qp
+length 3: pqp, qpq
+length 4: pqpq, qpqp
+length 5: pqpqp
+
+Help Erlin find the number of distinct substrings of the given string.
+
+Input Format:
+First line of the input consists of the string given to Erlin.
+Output Format:
+Output is an integer that corresponds to the number of distinct substrings of the given string.
+Refer sample input and output for formatting specifications.
+
+Sample Input and Output:
+Sample Input 1:
+pqpqp
+Sample Output 1:
+9
+
+Sample Input 2:
+abcd
+Sample Output 2:
+10

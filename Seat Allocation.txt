@@ -1,0 +1,28 @@
+Seat Allocation I
+ 
+The seats are arranged in the lab in a rectangular fashion with m rows and n columns. The students are seated in the lab according to their roll numbers in rowwise order, starting from 1.
+Given the roll number of a student, find whether the student is seated in the first row or in the 1st or last column.
+ 
+Input and Output Format:
+Refer sample input and output.
+The output consists of a string --- “yes” or “no”.
+ 
+All text in bold corresponds to input and the rest corresponds to output.
+Sample Input and Output 1:
+Enter the number of rows
+5
+Enter the number of columns
+10
+Enter the roll number of the student
+41
+yes
+ 
+ 
+Sample Input and Output 2:
+Enter the number of rows
+5
+Enter the number of columns
+10
+Enter the roll number of the student
+42
+no

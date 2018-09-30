@@ -1,0 +1,43 @@
+LongestCommonPrefix
+Given the array of strings as input1, write a program to find the longest S which is the prefix of ALL the strings in the array. As an example, longest common prefix of "abcdefgh" and "abcefgh" is "abc".
+ 
+ 
+Business Rules
+ 
+There is no prefix found print "No longest common prefix found".
+Input Format
+First input is a integer value,Second and Third input values are string respectively.
+Refer sample input for the format.
+ 
+Output Format
+ 
+Output contains the longest common prefix. Refer sample output for the format.
+ 
+Sample Input 1
+2
+Sky is blue
+Sky is dark
+ 
+Sample Output 1
+Sky is 
+
+Sample Input 2:
+abc
+def
+ghi
+Sample Output 2: 
+No longest common prefix found
+
+ 
+ 
+Function specification is the following for C#, Java and C++.
+Name:-LongestCommonPrefix (C#)/longestCommonPrefix (Java,C++)
+Return Type:- string
+Parameter(s):- string[] input1
+ 
+Function specification for C is the following.
+Name:-longestCommonPrefix  
+Return Type:- char*
+Parameter(s):- char** input1,int size;
+ 
+

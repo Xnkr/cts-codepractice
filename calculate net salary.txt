@@ -1,0 +1,42 @@
+Calculate Net Salary 
+ 
+Write a program that totals and outputs the monthly salary information for an employee,   including all the amounts deducted from an employee's gross salary and the net salary  that is due to the employee. The user should enter employee's name and the gross pay  of the employee. Each employee has the following deductions taken from his gross pay:
+ 
+Federal Income Tax: 15%
+State Tax: 3.5%
+Social Security + Medicare Tax: 8.5%
+Health Insurance Rs.75
+ 
+ 
+Business rules:
+ 
+1. Gross salary should always be a positive number. Else it  should print "Salary has to be a positive number".
+2. Accept the employee's first name and last name  and it should print last name, first name along with the final output.  
+ 
+Note:
+The Method and inputs are: void calculateNetSal(char *firstName,char *lastName, double grossSal)
+
+Sample Input  and output 1:
+ 
+Enter the first name
+Smith
+Enter the last name
+Steve
+Entet the gross salary
+3575
+Name : Steve , Smith
+Gross Amount: Rs.3575.00
+Federal Tax: Rs.536.25
+State Tax: Rs.125.13
+Social Sec / Medicare: Rs.303.88
+Health Insurance: Rs.75.00
+Net Pay: Rs.2534.74
+
+Sample Input  and output 2: 
+Enter the first name
+Allan
+Enter the last name
+Ray
+Enter the gross salary
+-100
+Salary has to be a positive number

@@ -1,0 +1,58 @@
+Form the largest number
+
+Given a list of non negative integers, Write a program to arrange them such that they form the largest number.
+
+Examples:
+
+If given [3, 30, 34, 5, 9], the largest formed number is 9534330
+
+Business Rules
+
+You should return a string instead of an integer.
+If the array contains negative elements, then display -1.  
+       
+Input Format
+
+Input consists of an integer array of varying size.The first integer corresponds to the array size and the next n integers corresponds to the elements of the array.
+
+Refer sample input and output for formatting specifications.
+
+Output Format
+Output will be a string. Refer sample input and output for formatting specifications.
+ 
+
+Function specification is the following for C#, Java and C++.
+Name:- LargestNumber(C#)/largestNumber(Java,C++)
+Return Type:- string
+Parameter(s):- int[] arr
+ 
+Function specification for C is the following
+Name:- largestNumber
+Return Type:- char*
+Parameter(s):- int* arr, int arrSize
+
+ 
+
+
+Sample Input 1:
+
+5
+3
+30
+34
+5
+9
+
+Sample Output 1:
+9534330
+
+Sample Input 2:
+
+5
+6
+-2
+
+Sample Output 2:
+-1
+ 
+

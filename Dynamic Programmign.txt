@@ -1,0 +1,108 @@
+Dynamic Programming
+ 
+Dynamic programming (also known as dynamic optimization) is a method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions. The next time the same subproblem occurs, instead of recomputing its solution, one simply looks up the previously computed solution, thereby saving computation time at the expense of a (hopefully) modest expenditure in storage space.
+ 
+There are two key attributes that a problem must have in order for dynamic programming to be applicable: optimal substructure and overlapping sub-problems.
+ 
+Optimal substructure means that the solution to a given optimization problem can be obtained by the combination of optimal solutions to its sub-problems.
+ 
+Overlapping sub-problems means that the space of sub-problems must be small, that is, any recursive algorithm solving the problem should solve the same sub-problems over and over, rather than generating new sub-problems.
+ 
+String Edit Distance
+Given two strings str1 and str2 and below operations that can be performed on str1, find minimum number of edits (operations) required to convert ‘str1’ into ‘str2’.
+ 
+Insert
+Remove
+Replace
+ 
+All of the above operations are of equal cost. Let the cost of each operation be 1.
+ 
+Examples:
+ 
+Input: str1 = "bite", str2 = "biten"
+Output: 1
+We can convert str1 into str2 by inserting a 'n'.
+ 
+Input: str1 = "bat", str2 = "but"
+Output: 1
+We can convert str1 into str2 by replacing 'a' with 'u'.
+ 
+Input: str1 = "tuesday", str2 = "thursday"
+Output: 2
+Last four and first characters are same. We basically need to convert "ue" to "hur". This can be done using below two operations.
+Insert h and replace e with r
+ 
+ 
+The following recurrence relations define the edit distance, d(s1,s2), of two strings s1 and s2:
+ 
+d('', '') = 0   ,      '' = empty string
+d(s, '') = d('', s) = |s| -- i.e. length of s
+d(s1+ch1, s2+ch2) =  min( d(s1, s2) + if ch1=ch2 then 0 else 1,
+                                                     d(s1+ch1, s2) + 1,
+                                                     d(s1, s2+ch2) + 1 )
+ 
+The first two rules above are obviously true, so it is only necessary consider the last one.
+Here, neither string is the empty string, so each has a last character, ch1 and ch2 respectively.
+Somehow, ch1 and ch2 have to be explained in an edit of s1+ch1 into s2+ch2. If ch1 equals ch2, they can be matched for no penalty, i.e. 0, and the overall edit distance is d(s1,s2).
+If ch1 differs from ch2, then ch1 could be changed into ch2, i.e. 1, giving an overall cost d(s1,s2)+1.
+Another possibility is to delete ch1 and edit s1 into s2+ch2, d(s1,s2+ch2)+1.
+The last possibility is to edit s1+ch1 into s2 and then insert ch2, d(s1+ch1,s2)+1. There are no other alternatives.
+We take the least expensive, i.e. min, of these alternatives.
+ 
+The recurrence relations imply an obvious ternary-recursive routine. This is not a good idea because it is exponentially slow, and impractical for strings of more than a very few characters.
+ 
+Examination of the relations reveals that d(s1,s2) depends only on d(s1',s2') where s1' is shorter than s1, or s2' is shorter than s2, or both. This allows the dynamic programming technique to be used.
+|s1| denotes the length of String s1.
+|s2| denotes the length of String s2.
+ 
+A two-dimensional matrix, m[0..|s1|,0..|s2|] is used to hold the edit distance values:
+ 
+m[i,j] = d(s1[1..i], s2[1..j])
+ 
+m[0,0] = 0
+m[i,0] = i, i=1..|s1|
+m[0,j] = j, j=1..|s2|
+ 
+m[i,j] = min( (m[i-1,j-1] + if s1[i]=s2[j] then 0 else 1 ),
+             m[i-1, j] + 1,
+             m[i, j-1] + 1 ), i=1..|s1|, j=1..|s2|
+ 
+m[,] can be computed row by row. Row m[i,] depends only on row m[i-1,]. The time complexity of this algorithm is O(|s1|*|s2|).
+If s1 and s2 have a `similar' length, about `n' say, this complexity is O(n^2), much better than exponential!
+m[|s1||s2|] gives the edit distance between the 2 strings.
+ 
+ 
+Let us try to understand the above Dynamic Programming Algorithm using the example given below.
+ 
+Let the 2 strings be
+s1 = sunday
+s2 = monday
+ 
+|s1| = 6 , |s2| = 6
+Size of the matrix is 7*7.
+ 
+The matrix m is computed in row-wise order as follows
+ 
+0 1 2 3 4 5 6
+1 1 2 3 4 5 6
+2 2 2 3 4 5 6
+3 3 3 2 3 4 5
+4 4 4 3 2 3 4
+5 5 5 4 3 2 3
+6 6 6 5 4 3 2
+ 
+Edit distance is 2
+ 
+[Hint : The matrix element m(2,3) is 3. It represents the edit distance between the strings "su" and "mon" ].
+ 
+ 
+Problem Statement
+ 
+Consider the 2 strings
+s1 = college
+s2 = called
+ 
+Find the edit distance between s1 and s2 using Dynamic Programming.
+ 
+In cases where you need to enter the row of a matrix, enter the elements separated by a space.
+[For ex : 1 1 2 3 4 5 6]

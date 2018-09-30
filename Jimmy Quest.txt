@@ -1,0 +1,28 @@
+Jimmy's Quest
+ 
+
+Jimmy Neutron, the 10 year old suburban genius has a strong love for mathematics. Known for his swirly-cone hairstyle, Jimmy spends most of his time with his robotic dog and embarks on mathematic quests.
+                                                                  
+This time his quests is to identify distances between numbers. He considered an array of integer numbers a, a1, ..., an - 1. For each element Jimmy got to find the distance to the nearest negative number (to the element which equals to a negative number). There is at least one negative number element in the given array.
+
+Can you work with Jimmy to write a program for this problem?
+ 
+Input Format:
+The first line contains integer n (1 = n = 2·105) — length of the array a.
+The second line contains integer elements of the array separated by single spaces ( - 109 = ai = 109).
+Output Format:
+Print the sequence d, d1, ..., dn - 1, where di is the difference of indices between i and nearest j such that aj is a negative number. It is possible that i = j.
+Refer sample input and output for formatting specifications.
+ 
+Sample Input 1:
+9
+2 1 -1 3 -1 0 3 2 4
+Sample Output 1:
+2 1 0 1 0 1 2 3 4
+ 
+Sample Input 1:
+5
+-1 1 2 3 4
+ 
+Sample Output 1:
+0 1 2 3 4

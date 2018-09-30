@@ -1,0 +1,29 @@
+Given a positive integer number, we want to generate a number sequence with the following rules:
+ 
+If the current number is 1, the process will be terminated. 
+Otherwise, if the current number is even, the next number will be n/2. 
+If the current number is odd (except 1), the next number will be (3*n)+1. 
+Then we turn to deal with the new number, until we get 1.
+ 
+For example, given the first number 22, we will get {22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1}. 
+The length of this sequence is 16.
+ 
+Given the first number, your task is to write a program that finds the length of the sequence generated with the above rules. 
+ 
+Input format:
+Input indicates the first number of the sequence. Invalid entry should display a message to the user, 
+ 
+Output format:
+Output is the length of sequence we generate.
+ 
+Business rules:
+1. The input should be a positive number.If not, display "Enter a number which is greater than zero".
+2. The length should not exceed beyond 100. If it exceeds,  it should display an error message "Length should not exceed more than 100".  
+
+Note :
+The Method and inputs are: void generateNumSequence(int num)
+ 
+Sample Input 
+22
+Sample Output
+16

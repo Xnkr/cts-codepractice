@@ -1,0 +1,17 @@
+COLLECT FLAGS - III
+ 
+            Patrick and Johnny are now in the third level of "Collect Flags" game. This level contains three different paths. They can go through only one path at a time. Their task is to collect the maximum number of flags. They got a clue that the path number with maximum value will contain maximum flags. Help them to select the path with maximum value.
+ 
+Input Format:
+Input consists of 3 lines. Each line consists of an integer representing the path number.
+ 
+Output Format:
+Output consists of a single line. Refer sample output for the format.
+ 
+Sample Input :
+3
+5
+1
+ 
+Sample Output :
+5 is the maximum number

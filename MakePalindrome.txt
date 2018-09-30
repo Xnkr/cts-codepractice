@@ -1,0 +1,43 @@
+Make Palindrome
+ 
+You are given a string whose length is even, and each character of the string is either 'x', 'y' or '/' .Write a program to replace each occurrence of '/' in string with either 'x' or 'y' such that the string becomes a palindrome.
+You are also given two integers, xCost and yCost. Replacing '/' with 'x' costs xCost, and replacing '/' with 'y' costs yCost. Return the minimum cost of replacing '/' by 'x' and 'y' such that the string turns into a palindrome. If it is impossible to obtain a palindrome, return -1.
+ 
+Example:
+Input: xyx/yxy/
+4
+6
+ 
+Ouput: 10
+[The only way to produce a palindrome is to replace 4th character of string with 'y' and 8th character with 'x'. The first replacement costs 4, the second costs 6, so the total cost is 4+6=10]
+ 
+Business Rules
+Each character of the string will be either 'x' or 'y' or '/'. Else display "Invalid Expression".
+xCost will be between 1 and 100, inclusive.
+yCost will be between 1 and 100, inclusive.
+ 
+Assume: The max length of string is 50.
+ 
+Input Format:
+Input will be of three lines, the first line is the string whose palindrome is to be constructed, the second is the xCost and the third is the yCost. See the sample input section for details.
+ 
+Output Format
+Display the minimum cost of replacing '/' by 'x' and 'y' such that the string turns into a palindrome. If it is impossible to obtain a palindrome, display -1. See the sample output section for details.
+ 
+Sample Input 1
+xyx/yxy/
+4
+6
+ 
+Sample Output 1
+10
+ 
+Sample Input 1
+xzy
+2
+3
+ 
+Sample Output 1
+Invalid Expression
+ 
+The method and inputs are: int calcPalCost(char *expr, int xCost, int yCost)
